@@ -1,0 +1,75 @@
+body {
+  background-color: pink;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+  color: #ff69b4;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.poem {
+  font-size: 1.5rem;
+  margin: 20px auto;
+  width: 80%;
+  line-height: 1.8;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.gallery {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+audio {
+  display: none;
+}
+
+/* Heart animation */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.imgur.com/z1hW8mN.png') repeat;
+  animation: moveHearts 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveHearts {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
